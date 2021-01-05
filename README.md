@@ -1,2 +1,2 @@
-# base-alpine-mono-sonarr
-Alpine based container with sonarr and monitored by s6-overlay
+# sonarr
+Ubuntu based container with sonarr and monitored by s6-overlay
