@@ -1,4 +1,4 @@
-FROM thies88/ubuntu-mono
+FROM thies88/ubuntu-mono-runtime
 
 # set version label
 ARG BUILD_DATE
@@ -10,7 +10,8 @@ LABEL maintainer="Thies88"
 # set environment variables
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV XDG_CONFIG_HOME="/config/xdg"
-ENV SONARR_BRANCH="master"
+#ENV SONARR_BRANCH="master"
+ENV SONARR_BRANCH="phantom-develop"
 
 RUN \
  echo "**** install packages ****" && \
@@ -29,7 +30,6 @@ RUN \
  tar xf \
 	/tmp/sonarr.tar.gz -C \
 	/app/sonarr/bin --strip-components=1 && \
- echo "UpdateMethod=docker\nBranch=${SONARR_BRANCH}\nPackageVersion=${VERSION}\nPackageAuthor=linuxserver.io" > /app/sonarr/package_info && \
  rm -rf /app/sonarr/bin/Sonarr.Update && \
  echo "**** cleanup ****" && \
  apt-get clean && \
