@@ -1,4 +1,4 @@
-FROM thies88/ubuntu-mono-runtime
+FROM thies88/ubuntu-mono
 
 # set version label
 ARG BUILD_DATE
