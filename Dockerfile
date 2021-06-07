@@ -10,8 +10,8 @@ LABEL maintainer="THEcontainers"
 # set environment variables
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV XDG_CONFIG_HOME="/config/xdg"
-#ENV SONARR_BRANCH="main"
-ENV SONARR_BRANCH="phantom-develop"
+ENV SONARR_BRANCH="main"
+#ENV SONARR_BRANCH="phantom-develop"
 
 RUN \
   echo "**** install packages ****" && \
