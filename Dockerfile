@@ -4,13 +4,14 @@ FROM thies88/ubuntu-mono
 ARG BUILD_DATE
 ARG VERSION
 ARG SONARR_VERSION
-LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="aptalca"
+LABEL build_version="version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL maintainer="THEcontainers"
 
 # set environment variables
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV XDG_CONFIG_HOME="/config/xdg"
-ENV SONARR_BRANCH="main"
+#ENV SONARR_BRANCH="main"
+ENV SONARR_BRANCH="phantom-develop"
 
 RUN \
   echo "**** install packages ****" && \
