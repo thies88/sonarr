@@ -1,4 +1,4 @@
-FROM mono:test
+FROM 2-base-ubuntu-mono
 
 # set version label
 ARG BUILD_DATE
