@@ -16,10 +16,9 @@ ENV SONARR_BRANCH="main"
 RUN \
   echo "**** install packages ****" && \
   apt-get update && \
-  apt-get install -y \
+  apt-get install --no-install-recommends -y \
     jq \
-	libmediainfo??? \
-	&& \
+	libmediainfo??? && \
   echo "**** install sonarr ****" && \
   mkdir -p /app/sonarr/bin && \
   if [ -z ${SONARR_VERSION+x} ]; then \
